@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CustomNavbar from './Navbar';
-import './home.css';
+import './Form.css';
 import { useNavigate } from 'react-router-dom';
 
 function Form({ onSubmit }) {
@@ -45,6 +45,7 @@ function Form({ onSubmit }) {
                   <input 
                     type="number" 
                     name="age" 
+                    placeholder="Enter your age" 
                     value={formData.age} 
                     onChange={handleChange} 
                     required 
@@ -56,6 +57,7 @@ function Form({ onSubmit }) {
                   <input 
                     type="number" 
                     name="bmi" 
+                    placeholder="Enter your BMI" 
                     value={formData.bmi} 
                     onChange={handleChange} 
                     required 
@@ -64,10 +66,11 @@ function Form({ onSubmit }) {
                   />
                 </div>
                 <div className='input'>
-                  <label>Diabetes Yes:1, No:0</label>
+                  <label>Diabetes:</label>
                   <input 
                     type="number" 
                     name="diabetes" 
+                    placeholder="Enter 1 for Yes, 0 for No" 
                     value={formData.diabetes} 
                     onChange={handleChange} 
                     required 
@@ -79,6 +82,7 @@ function Form({ onSubmit }) {
                   <input 
                     type="number" 
                     name="ast" 
+                    placeholder="Enter value in U/L" 
                     value={formData.ast} 
                     onChange={handleChange} 
                     required 
@@ -90,6 +94,7 @@ function Form({ onSubmit }) {
                   <input 
                     type="number" 
                     name="alt" 
+                    placeholder="Enter value in U/L" 
                     value={formData.alt} 
                     onChange={handleChange} 
                     required 
@@ -101,6 +106,7 @@ function Form({ onSubmit }) {
                   <input 
                     type="number" 
                     name="platelet" 
+                    placeholder="Enter value in 10^9/L" 
                     value={formData.platelet} 
                     onChange={handleChange} 
                     required 
@@ -112,6 +118,7 @@ function Form({ onSubmit }) {
                   <input 
                     type="number" 
                     name="albumin" 
+                    placeholder="Enter value in gms/dL" 
                     value={formData.albumin} 
                     onChange={handleChange} 
                     required 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Form from './components/Form';
 import Result from './components/Result';
+import Info from './components/Info';
 import axios from 'axios';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,18 +30,9 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Form onSubmit={handleSubmit} />
-            }
-          />
-          <Route
-            path="/result"
-            element={
-              <Result result={result} onPredictAgain={handlePredictAgain} />
-            }
-          />
+          <Route path="/" element={<Form onSubmit={handleSubmit} />} />
+          <Route path="/result" element={<Result result={result} onPredictAgain={handlePredictAgain} />} />
+          <Route path="/info" element={<Info />} />
         </Routes>
         {error && <p>{error}</p>}
       </div>
