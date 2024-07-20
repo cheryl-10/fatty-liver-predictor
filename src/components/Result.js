@@ -14,6 +14,7 @@ const Result = ({ result, onPredictAgain }) => {
     <div className="result-container">
       <h2 className="result-title">Prediction Result</h2>
       <p className="result-content">{result}</p>
+      <p className="disclaimer">Disclamer: Please contact a healthcare professional for further guidance and diagnosis.</p>
       <button className="result-button" onClick={handlePredictAgain}>Predict Again</button>
     </div>
   );

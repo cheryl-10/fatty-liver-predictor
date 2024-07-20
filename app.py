@@ -29,7 +29,7 @@ def predict():
         input_df = pd.DataFrame([input_data])
         input_scaled = scaler.transform(input_df)
         prediction = model.predict(input_scaled)
-        result = 'FATTY LIVER' if prediction[0] == 1 else 'NO FATTY LIVER'
+        result = 'FATTY LIVER\n' if prediction[0] == 1 else 'NO FATTY LIVER\n'
         return jsonify({'result': result})
     except Exception as e:
         print(f"Error during prediction: {e}")
